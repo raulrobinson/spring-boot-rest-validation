@@ -1,5 +1,7 @@
 # Java Spring Boot REST Validation
 
+Bean validation and custom validator.
+
 ### GET ALL MOVIES.
 curl -X GET "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -H "accept: application/json"
 
