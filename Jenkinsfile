@@ -1,6 +1,6 @@
 #!groovy
 pipeline {
-    agent none
+    agent any
     environment {
         IMAGE='openjdk:11-jre-slim-buster'
         TAG='latest'
