@@ -69,7 +69,7 @@ curl -X PUT "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/2" 
 
 curl -X DELETE "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/1" -H "accept: application/json"
 
-### PATCH MOVIE.
+### MANAGE HANDLER EXCEPTION.
 
 curl -X PATCH "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/3" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"additionalProp1\": \"string\", \"additionalProp2\": \"string\", \"additionalProp3\": \"string\"}"
 
