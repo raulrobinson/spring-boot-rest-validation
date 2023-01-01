@@ -1,6 +1,6 @@
 # Java Spring Boot REST Validation
 
-## GET ALL MOVIES.
+### GET ALL MOVIES.
 curl -X GET "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -H "accept: application/json"
 
 ```json
@@ -26,7 +26,7 @@ curl -X GET "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -H
 ]
 ```
 
-## CREATE MOVIE. 
+### CREATE MOVIE. 
 
 curl -X POST "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"author\": \"string\", \"id\": 0, \"name\": \"string\", \"score\": 0}"
 
@@ -39,7 +39,7 @@ curl -X POST "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -
 }
 ```
 
-## GET MOVIE BY ID.
+### GET MOVIE BY ID.
 
 curl -X GET "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/1" -H "accept: application/json"
 
@@ -52,7 +52,7 @@ curl -X GET "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/1" 
 }
 ```
 
-## SAVE OR UPDATE MOVIE.
+### SAVE OR UPDATE MOVIE.
 
 curl -X PUT "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/2" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"author\": \"nuevo\", \"name\": \"nombre nuevo\", \"score\": 15}"
 
@@ -65,11 +65,11 @@ curl -X PUT "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/2" 
 }
 ```
 
-## DELETE MOVIE.
+### DELETE MOVIE.
 
 curl -X DELETE "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/1" -H "accept: application/json"
 
-## PATCH MOVIE.
+### PATCH MOVIE.
 
 curl -X PATCH "http://localhost:8081/api/v1/spring-boot-rest-validation/movies/3" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"additionalProp1\": \"string\", \"additionalProp2\": \"string\", \"additionalProp3\": \"string\"}"
 
