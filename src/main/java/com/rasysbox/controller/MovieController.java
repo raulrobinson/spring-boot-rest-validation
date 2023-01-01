@@ -34,7 +34,7 @@ public class MovieController {
 
     /**
      * CREATE NEW MOVIE.
-     * @param newMovie
+     * @param newMovie Movie
      * @return Movie
      */
     @PostMapping("/movies")
@@ -46,7 +46,7 @@ public class MovieController {
 
     /**
      * FIND MOVIE.
-     * @param id
+     * @param id Long
      * @return Movie.
      */
     @GetMapping("/movies/{id}")
@@ -58,8 +58,8 @@ public class MovieController {
 
     /**
      * CREATE OR UPDATE MOVIE.
-     * @param newMovie
-     * @param id
+     * @param newMovie Movie
+     * @param id Long
      * @return Movie.
      */
     @PutMapping("/movies/{id}")
@@ -82,8 +82,8 @@ public class MovieController {
 
     /**
      * UPDATE AUTHOR MOVIE.
-     * @param update
-     * @param id
+     * @param update Map<String, String>
+     * @param id Long
      * @return Movie.
      */
     @PatchMapping("/movies/{id}")
@@ -107,7 +107,7 @@ public class MovieController {
 
     /**
      * DELETE MOVIE.
-     * @param id
+     * @param id Long
      * @return nothing.
      */
     @DeleteMapping("/movies/{id}")
