@@ -541,3 +541,98 @@ Using generated security password: 43c2f231-b9c6-4ed8-a9d4-9fff0f82542a
 2023-01-01 15:54:14,520 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-0.0.0.0-8081"]
 2023-01-01 15:54:14,545 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path ''
 2023-01-01 15:54:14,806 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AppApplication in 6.085 seconds (JVM running for 6.694)
+2023-01-01 16:06:02,978 INFO org.apache.juli.logging.DirectJDKLog [http-nio-0.0.0.0-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-01 16:06:02,980 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-01 16:06:02,980 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-0.0.0.0-8081-exec-1] Detected StandardServletMultipartResolver
+2023-01-01 16:06:02,980 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-0.0.0.0-8081-exec-1] Detected AcceptHeaderLocaleResolver
+2023-01-01 16:06:02,980 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-0.0.0.0-8081-exec-1] Detected FixedThemeResolver
+2023-01-01 16:06:02,982 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-0.0.0.0-8081-exec-1] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4b748fef
+2023-01-01 16:06:02,982 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-0.0.0.0-8081-exec-1] Detected org.springframework.web.servlet.support.SessionFlashMapManager@4ea2fd0a
+2023-01-01 16:06:02,982 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-01-01 16:06:02,983 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-1] Completed initialization in 3 ms
+2023-01-01 16:06:02,995 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-1] POST "/api/v1/spring-boot-rest-validation/movies", parameters={}
+2023-01-01 16:06:02,999 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-1] Mapped to com.rasysbox.controller.MovieController#newMovie(Movie)
+2023-01-01 16:06:03,073 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-1] Read "application/json;charset=UTF-8" to [Movie{id=0, name='string', author='string', score=0}]
+2023-01-01 16:06:03,128 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-1] Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-01-01 16:06:03,130 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-1] Writing [Movie{id=4, name='string', author='string', score=0}]
+2023-01-01 16:06:03,150 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-1] Completed 201 CREATED
+2023-01-01 16:07:28,621 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-3] GET "/api/v1/spring-boot-rest-validation/movies/1", parameters={}
+2023-01-01 16:07:28,623 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-3] Mapped to com.rasysbox.controller.MovieController#findOne(Long)
+2023-01-01 16:07:28,641 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-3] Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-01-01 16:07:28,642 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-3] Writing [Movie{id=1, name='El martir del Calvario', author='Miguel Morayta', score=15.41}]
+2023-01-01 16:07:28,643 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-3] Completed 200 OK
+2023-01-01 16:08:25,253 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-4] PUT "/api/v1/spring-boot-rest-validation/movies/2", parameters={}
+2023-01-01 16:08:25,254 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-4] Mapped to com.rasysbox.controller.MovieController#saveOrUpdate(Movie, Long)
+2023-01-01 16:08:25,255 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-4] Read "application/json;charset=UTF-8" to [Movie{id=null, name='nombre nuevo', author='nuevo', score=15}]
+2023-01-01 16:08:25,261 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-4] Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-01-01 16:08:25,262 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-4] Writing [Movie{id=2, name='nombre nuevo', author='nuevo', score=15}]
+2023-01-01 16:08:25,263 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-4] Completed 200 OK
+2023-01-01 16:08:58,842 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-5] DELETE "/api/v1/spring-boot-rest-validation/movies/1", parameters={}
+2023-01-01 16:08:58,843 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-5] Mapped to com.rasysbox.controller.MovieController#deleteMovie(Long)
+2023-01-01 16:08:58,853 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-5] Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-01-01 16:08:58,854 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-5] Nothing to write: null body
+2023-01-01 16:08:58,855 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-5] Completed 200 OK
+2023-01-01 16:09:16,148 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-6] PATCH "/api/v1/spring-boot-rest-validation/movies/3", parameters={}
+2023-01-01 16:09:16,149 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-6] Mapped to com.rasysbox.controller.MovieController#patch(Map, Long)
+2023-01-01 16:09:16,153 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-6] Read "application/json;charset=UTF-8" to [{additionalProp1=string, additionalProp2=string, additionalProp3=string}]
+2023-01-01 16:09:16,157 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-0.0.0.0-8081-exec-6] Using @ExceptionHandler com.rasysbox.error.CustomGlobalExceptionHandler#springUnSupportedFieldPatch(HttpServletResponse)
+2023-01-01 16:09:16,158 DEBUG org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-0.0.0.0-8081-exec-6] Resolved [com.rasysbox.error.MovieUnSupportedFieldPatchException: Field [additionalProp1, additionalProp2, additionalProp3] update is not allow.]
+2023-01-01 16:09:16,159 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-6] Completed 405 METHOD_NOT_ALLOWED
+2023-01-01 16:09:16,167 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-6] "ERROR" dispatch for PATCH "/error", parameters={}
+2023-01-01 16:09:16,168 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-6] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-01-01 16:09:16,172 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-6] Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-01-01 16:09:16,173 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-6] Writing [{timestamp=Sun Jan 01 16:09:16 COT 2023, status=405, error=Method Not Allowed, path=/api/v1/spring-b (truncated)...]
+2023-01-01 16:09:16,179 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-6] Exiting from "ERROR" dispatch, status 405
+2023-01-01 16:15:30,472 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-8] PATCH "/api/v1/spring-boot-rest-validation/movies/3", parameters={}
+2023-01-01 16:15:30,473 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-8] Mapped to com.rasysbox.controller.MovieController#patch(Map, Long)
+2023-01-01 16:15:30,475 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-8] Read "application/json;charset=UTF-8" to [{additionalProp1=rasysbox}]
+2023-01-01 16:15:30,477 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-0.0.0.0-8081-exec-8] Using @ExceptionHandler com.rasysbox.error.CustomGlobalExceptionHandler#springUnSupportedFieldPatch(HttpServletResponse)
+2023-01-01 16:15:30,478 DEBUG org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-0.0.0.0-8081-exec-8] Resolved [com.rasysbox.error.MovieUnSupportedFieldPatchException: Field [additionalProp1] update is not allow.]
+2023-01-01 16:15:30,478 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-8] Completed 405 METHOD_NOT_ALLOWED
+2023-01-01 16:15:30,479 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-8] "ERROR" dispatch for PATCH "/error", parameters={}
+2023-01-01 16:15:30,479 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-0.0.0.0-8081-exec-8] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-01-01 16:15:30,481 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-0.0.0.0-8081-exec-8] Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-01-01 16:15:30,481 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-0.0.0.0-8081-exec-8] Writing [{timestamp=Sun Jan 01 16:15:30 COT 2023, status=405, error=Method Not Allowed, path=/api/v1/spring-b (truncated)...]
+2023-01-01 16:15:30,482 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-0.0.0.0-8081-exec-8] Exiting from "ERROR" dispatch, status 405
+2023-01-01 16:21:14,218 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-01 16:21:14,218 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-01 16:21:14,444 WARN org.springframework.beans.factory.support.DisposableBeanAdapter [SpringApplicationShutdownHook] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2023-01-01 16:21:14,445 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-01 16:21:14,451 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-01 16:44:06,407 INFO org.springframework.boot.StartupInfoLogger [main] Starting AppApplicationTests using Java 11.0.15.1 on DESKTOP-89IV9FC with PID 36192 (started by rasys in D:\Desktop\Base de Conocimiento\Exception-Handling\to-github\spring-boot-rest-validation)
+2023-01-01 16:44:06,415 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.8, Spring v5.3.14
+2023-01-01 16:44:06,415 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: local
+2023-01-01 16:44:06,455 DEBUG org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5b78fdb1
+2023-01-01 16:44:07,398 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-01 16:44:07,477 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interfaces.
+2023-01-01 16:44:08,862 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-01 16:44:09,098 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-01 16:44:09,208 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-01 16:44:09,293 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.33
+2023-01-01 16:44:09,505 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-01 16:44:09,689 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-01 16:44:10,433 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-01 16:44:10,443 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-01 16:44:11,157 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-01 16:44:11,332 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 13 mappings in 'requestMappingHandlerMapping'
+2023-01-01 16:44:11,607 INFO org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 9cb86187-7132-4b73-af54-224c2014ebcc
+
+2023-01-01 16:44:11,847 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cdc5155, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d70e68b, org.springframework.security.web.header.HeaderWriterFilter@72ad577b, org.springframework.security.web.csrf.CsrfFilter@2bd158ea, org.springframework.security.web.authentication.logout.LogoutFilter@e7ddf8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17d83fe4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45649467, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@195888a6, org.springframework.security.web.session.SessionManagementFilter@4f579582, org.springframework.security.web.access.ExceptionTranslationFilter@218fc40d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@eef6e]
+2023-01-01 16:44:12,203 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-01-01 16:44:12,284 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/swagger-ui/] in 'viewControllerHandlerMapping'
+2023-01-01 16:44:12,321 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**, /swagger-ui/**] in 'resourceHandlerMapping'
+2023-01-01 16:44:12,363 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-01-01 16:44:12,530 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/v1/spring-boot-rest-validation/**'] with []
+2023-01-01 16:44:12,531 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/actuator/**'] with []
+2023-01-01 16:44:12,531 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/v2/api-docs/**'] with []
+2023-01-01 16:44:12,531 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/swagger-ui/**'] with []
+2023-01-01 16:44:12,532 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/h2-console/**'] with []
+2023-01-01 16:44:12,932 INFO org.springframework.boot.StartupInfoLogger [main] Started AppApplicationTests in 6.968 seconds (JVM running for 8.129)
+2023-01-01 16:44:13,190 DEBUG org.springframework.context.support.AbstractApplicationContext [SpringApplicationShutdownHook] Closing org.springframework.web.context.support.GenericWebApplicationContext@5b78fdb1, started on Sun Jan 01 16:44:06 COT 2023
+2023-01-01 16:44:13,199 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-01 16:44:13,200 INFO org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-01 16:44:13,210 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-01 16:44:13,216 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
