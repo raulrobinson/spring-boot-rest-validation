@@ -14,11 +14,10 @@
 	<name>spring-boot-rest-validation</name>
 	<description>Handling and Validation for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
 		<cloud.version>2020.0.6</cloud.version>
 		<spring-boot-admin.version>2.3.0</spring-boot-admin.version>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
 
@@ -165,6 +164,14 @@
 	<build>
 		<finalName>${project.name}</finalName>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
