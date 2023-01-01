@@ -24,3 +24,14 @@ curl -X GET "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -H
     }
 ]
 ```
+
+curl -X POST "http://localhost:8081/api/v1/spring-boot-rest-validation/movies" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"author\": \"string\", \"id\": 0, \"name\": \"string\", \"score\": 0}"
+
+```json
+{
+  "id": 4,
+  "name": "string",
+  "author": "string",
+  "score": 0
+}
+```
