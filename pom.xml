@@ -14,6 +14,7 @@
 	<name>spring-boot-rest-validation</name>
 	<description>Handling and Validation for Spring Boot</description>
 	<properties>
+		<java.version>11</java.version>
 		<cloud.version>2020.0.6</cloud.version>
 		<spring-boot-admin.version>2.3.0</spring-boot-admin.version>
 	</properties>
