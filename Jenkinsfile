@@ -1,5 +1,5 @@
 #!groovy
-pipeline {
+/*pipeline {
     agent any
     environment {
         IMAGE='openjdk:11-jre-slim-buster'
@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                //sh "docker build --pull -t ${IMAGE}:${TAG} ."
-                sh 'docker build -t rasysbox/spring-boot-rest-validation:latest .'
+                sh "docker build --pull -t ${IMAGE}:${TAG} ."
+                //sh 'docker build -t rasysbox/spring-boot-rest-validation:latest .'
             }
         }
         stage('Push to dockerhub') {
@@ -24,9 +24,9 @@ pipeline {
             }
         }
     }
-}
+}*/
 
-/*pipeline {
+pipeline {
 	agent none
   stages {
   	stage('Maven Install') {
@@ -46,4 +46,4 @@ pipeline {
       }
     }
   }
-}*/
+}
