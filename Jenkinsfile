@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy Docker') {
             agent any
             steps {
-                //sh 'docker stop springboot-deploy || true && docker rm springboot-deploy || true'
+                sh 'docker stop springboot-deploy || true && docker rm springboot-deploy || true'
                 sh 'docker run --name springboot-deploy -d -p 8085:8085 rasysbox/spring-boot-rest-validation:latest'
             }
         }
