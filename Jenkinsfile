@@ -46,8 +46,11 @@ pipeline {
             }
         }
         stage('Deploy docker') {
-            //sh 'docker stop springboot-deploy || true && docker rm springboot-deploy || true'
-            sh 'docker run --name springboot-deploy -d -p 8085:8085 springboot-deploy:${env.BUILD_NUMBER}'
+            agent any
+            steps {
+                //sh 'docker stop springboot-deploy || true && docker rm springboot-deploy || true'
+                sh 'docker run --name springboot-deploy -d -p 8085:8085 springboot-deploy:${env.BUILD_NUMBER}'
+            }
         }
     }
 }
