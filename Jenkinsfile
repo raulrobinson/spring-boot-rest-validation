@@ -27,23 +27,28 @@
 }*/
 
 pipeline {
-	agent none
-  stages {
-  	stage('Maven Install') {
-    	agent {
-      	docker {
-        	image 'maven:3.8.1'
+    agent none
+    stages {
+  	    stage('Maven Install') {
+    	    agent {
+      	        docker {
+        	        image 'maven:3.8.1'
+                }
+            }
+            steps {
+      	        sh 'mvn clean install'
+            }
         }
-      }
-      steps {
-      	sh 'mvn clean install'
-      }
+        stage('Docker Build') {
+    	    agent any
+            steps {
+      	        sh 'docker build -t rasysbox/spring-boot-rest-validation:latest .'
+            }
+        }
+        stage('Deploy docker') {
+            echo "Docker Image Tag Name: ${dockerImageTag}"
+            //sh "docker stop springboot-deploy || true && docker rm springboot-deploy || true"
+            sh "docker run --name springboot-deploy -d -p 8085:8085 springboot-deploy:${env.BUILD_NUMBER}"
+        }
     }
-    stage('Docker Build') {
-    	agent any
-      steps {
-      	sh 'docker build -t rasysbox/spring-boot-rest-validation:latest .'
-      }
-    }
-  }
 }
